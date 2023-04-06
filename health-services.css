@@ -1,0 +1,197 @@
+body {
+  background-color: #1E3B5A !important;
+}
+
+.top-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Nib Pro' !important;
+}
+
+.search-line {
+    height: 20px;
+    border-left: 1px solid #FFFFFF;
+}
+
+.search-bar {
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+  color: #FFFFFF;
+}
+
+.search-bar::placeholder {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/*text clr size */
+
+.primary-text{
+  font-size: 14px;
+  font-weight: 300;
+  color: #FFFFFF;
+}
+
+.secondary-text{
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.text-clr{
+  font-family: 'Nib Pro' !important;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #1E3B5A !important;
+}
+
+.text-clr-2{
+  color: #FFFFFF !important;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.secendory-bg{
+  font-family: 'Nib Pro' !important;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1E3B5A !important;
+  opacity: 0.75 !important;
+}
+
+.primary-bg{
+  font-family: 'Nib Pro' !important;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1E3B5A !important;
+  opacity: 0.75 !important;
+}
+
+/* card section*/
+
+.card{
+  border-radius: 16px !important;
+}
+
+.card-header{
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+  background: #247FA4 !important;
+}
+
+.on-switch{
+  font-family: 'Nib Pro' !important;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  color: #1E3B5A !important;
+  opacity: 0.75 !important;
+}
+
+.inputs input[type=text] {
+  border-radius: 100px;
+  background-color: #FFFFFF;
+  padding: 13px;
+}
+
+.inputs ::placeholder{
+  font-weight: 400;
+  font-size: 18px;
+  color: #1E3B5A !important;
+  opacity: 0.5 !important;
+  padding: 1.6rem;
+}
+
+.textarea{
+  display: flex;
+  align-items: flex-start !important;
+  height: 6rem;
+  border: 1px solid rgba(30, 59, 90, 0.25);
+  border-radius: 16px;
+  width: 100%;
+}
+
+.notes ::placeholder{
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 18px;
+  color: #1E3B5A !important;
+  opacity: 0.5 !important;
+  padding-left: 1rem;
+}
+
+.form-check-label{
+  color: #1E3B5A !important;
+  opacity: 0.75 !important;
+}
+
+/* btn section */
+
+.btn{
+  background: rgba(30, 59, 90, 0.1) !important;
+  border-radius: 100px !important;
+  color: #1E3B5A !important;
+  opacity: 0.75 !important;
+  width: fit-content;
+  padding: 8px 24px !important;
+}
+
+.btn:hover {
+  background: #247FA4 !important;
+  color: #FFFFFF !important; 
+}
+
+.btn-2{
+  font-family: 'Nib Pro';
+  font-weight: 700;
+  font-size: 24px;
+  background: #4E8246 !important;
+  border-radius: 100px !important;
+  color: #FFFFFF !important;
+  width: fit-content;
+  padding: 8px 24px !important;
+  border: none;
+}
+
+/* btn section end*/
+
+.item-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 100px;
+}
+
+.dropdown-toggle::after{
+  display: none !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.birth-dropdown {
+  color: #1E3B5A !important;
+  opacity: 0.5 !important;
+  padding-left: 1.6rem;
+  padding-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .card{
+    width: fit-content;
+  }
+}
