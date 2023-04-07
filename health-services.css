@@ -17,7 +17,6 @@ body {
 .search-bar {
   border: none;
   outline: none;
-  width: 100%;
   background-color: transparent;
   color: #FFFFFF;
 }
@@ -110,7 +109,7 @@ body {
 .textarea{
   display: flex;
   align-items: flex-start !important;
-  height: 6rem;
+  height: 8rem;
   border: 1px solid rgba(30, 59, 90, 0.25);
   border-radius: 16px;
   width: 100%;
@@ -122,12 +121,25 @@ body {
   font-size: 18px;
   color: #1E3B5A !important;
   opacity: 0.5 !important;
-  padding-left: 1rem;
+  padding-left: 2rem;
+  padding-top: 0.5rem;
 }
 
 .form-check-label{
   color: #1E3B5A !important;
   opacity: 0.75 !important;
+}
+
+.form-check-input:checked {
+  border: 4px solid #247FA4 !important;
+  background-color: #FFFFFF !important;
+}
+
+.form-check-inputs{
+  width: 1em;
+  height: 1em;
+  margin-top: 0.25em;
+  vertical-align: top;
 }
 
 /* btn section */
@@ -188,6 +200,14 @@ a {
   opacity: 0.5 !important;
   padding-left: 1.6rem;
   padding-top: 10px;
+}
+
+.filter-dropdown{
+  transform: translate(2px , 54px) !important;
+  width: 100%;
+  border-radius: 18px !important;
+  border: none !important;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 600px) {
