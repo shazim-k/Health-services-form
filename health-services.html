@@ -56,9 +56,9 @@
 
           <div class="card-body bg-secendory p-5">
             <div class="d-flex p-5">
-              <img src="public/on-switch.svg">
-              <p class="on-switch ms-4">This patient is at least 18 years of age, not in crisis,<br> and not seeking
-                treatment for substance abuse.</p>
+              <img src="public/on-switch.svg" class="on-switch">
+              <img src="public/of-switch.svg" class="off-switch">
+              <p class="on-switch ms-4">This patient is at least 18 years of age, not in crisis,<br> and not seeking treatment for substance abuse.</p>
             </div>
 
             <div class="row mt-4">
@@ -282,6 +282,22 @@
     </div>
   </div>
   
+
+  <script>
+		var onSwitch = document.querySelector(".on-switch");
+		var offSwitch = document.querySelector(".off-switch");
+
+		onSwitch.addEventListener("click", function() {
+			onSwitch.style.display = "none";
+			offSwitch.style.display = "block";
+		});
+
+    offSwitch.addEventListener("click", function() {
+			offSwitch.style.display = "none";
+			onSwitch.style.display = "block";
+		});
+    
+	</script>
   
 </body>
 
