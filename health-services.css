@@ -90,6 +90,12 @@ body {
   line-height: 32px;
   color: #1E3B5A !important;
   opacity: 0.75 !important;
+  cursor: pointer;
+}
+
+.off-switch {
+  display: none;
+  cursor: pointer;
 }
 
 .inputs input[type=text] {
