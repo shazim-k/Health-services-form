@@ -6,9 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="health-services.css">
-  <link href="https://fonts.googleapis.com/css?family=Nib+Pro&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
 
+  
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+  <link href="//db.onlinewebfonts.com/c/2d19acb89b75341c96cc7c190c922820?family=Nib+Pro" rel="stylesheet" type="text/css"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -47,18 +52,20 @@
         <div class="card mt-4 ms-3">
           
           <div class="card-header p-5">
-            <h1 class="text-white">Patient Referral Form </h1>
-            <img class="pb-1" src="public/info.svg" alt="">
-            <span class="text-white mt-4 ms-2"> You will receive an automated response from our Care Coordination team
-              to
-              confirm receipt of this referral.All requests will be processed within 2 business hours.</span>
+            <h1 class="text-white bg-seceondary ms-5">Patient Referral Form </h1>
+            <div class="d-flex ms-5">
+              <img class="pb-3" src="public/info.svg" alt="">
+              <p class="text-white mt-4 ms-2"> You will receive an automated response from our Care Coordination team
+                to
+                confirm receipt of this referral.All requests will be processed within 2 business hours.</p>
+            </div>
           </div>
 
-          <div class="card-body bg-secendory p-5">
+          <div class="card-body p-5">
             <div class="d-flex p-5">
               <img src="public/on-switch.svg" class="on-switch">
               <img src="public/of-switch.svg" class="off-switch">
-              <p class="on-switch ms-4">This patient is at least 18 years of age, not in crisis,<br> and not seeking treatment for substance abuse.</p>
+              <p class="on-switch ms-4 mt-2">This patient is at least 18 years of age, not in crisis,<br>and not seeking treatment for substance abuse.</p>
             </div>
 
             <div class="row mt-4">
@@ -88,19 +95,12 @@
                   <div class="col-md-4 inputs mb-3">
                     <input type="text" class="form-control" placeholder="Last Name">
                   </div>
-                  <div class="col-md-4 mb-3">
-                    <div class="dropdown">
-                      <a class="dropdown-toggle" role="button" id="projectFilterButton" data-bs-toggle="dropdown" aria-expanded="false">
-                        <p class="filter-button birth-dropdown">Date of Birth</p>
-                        <img class="me-4" src="/public/birth.svg" alt=""  for="projectFilterButton">
-                      </a>
-                      <ul class="dropdown-menu filter-dropdown" aria-labelledby="projectFilterButton">
-                        <li><a class="dropdown-item" data-value="By Status">By Status</a></li>
-                        <li><a class="dropdown-item" data-value="By name">By name</a></li>
-                      </ul>
-                    </div>
+                  <div class="d-flex col-md-4 inputs mb-3">
+                    <input type="text" id="datepicker" class="form-control birth-svg" placeholder="Date of Birth">
                   </div>
+                  
                 </div>
+                  
                   
                 <div class="row mt-3">
                   <div class="col-md-4 inputs mb-3">
@@ -129,10 +129,11 @@
               <div class="col ps-5">
                 <h3 class="text-clr"> Insurance Information * </h3>
                 <div class="row d-flex mt-3">
-                  <div class="col-md-4 mb-3">
-                    <div class="form-check">
-                      <input type="radio" class="form-check-input mt-2" id="hasDetails">
-                      <label class="form-check-label mt-1 ps-2" for="hasDetails">I have these details</label>
+                  <div class="col-md-4">
+                    <div class="d-flex">
+                      <img class="tick-check on-switch" src="public/of-radio.svg">
+                      <img class="tick-check-2 off-switch" src="public/on-radio.svg">
+                      <p class="secendory-bg ms-3 mt-3">I have these details</p>
                     </div>
                   </div>
                   <div class="col-md-4 inputs mb-3">
@@ -145,7 +146,7 @@
               </div>
             </div>
 
-            <div class="row mt-4">
+            <div class="row mt-4 ms-4">
               <div class="col-md-6">
                 <h3 class="text-clr text-nowrap">Primary Referral Reason *</h3>
                 <div class="d-flex">
@@ -169,30 +170,58 @@
               <div class="col-md-6 mt-1">
                 <h3 class="text-clr">Service Type *</h3>
                 <div class="d-flex mt-1">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                      value="option1">
-                    <label class="form-check-label ms-2" for="exampleRadios1">
-                      Psychiatry
-                    </label>
+                  <div class="d-flex">
+                    <img class="tick-check on-switch" src="public/of-radio.svg">
+                    <img class="tick-check-2 off-switch" src="public/on-radio.svg">
+                    <p class="secendory-bg ms-3 mt-3">Psychiarty</p>
                   </div>
-                  <div class="form-check ms-4">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                      value="option2">
-                    <label class="form-check-label ms-2" for="exampleRadios2">
-                      Psychology
-                    </label>
+                  <div class="d-flex">
+                    <img class="tick-check on-switch ms-3" src="public/of-radio.svg">
+                    <img class="tick-check-2 off-switch ms-3" src="public/on-radio.svg">
+                    <p class="secendory-bg ms-3 mt-3">Psychology</p>
                   </div>
-                  <div class="form-check ms-4">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
-                      value="option3">
-                    <label class="form-check-label ms-2" for="exampleRadios3">
-                      Both
-                    </label>
+                  <div class="d-flex">
+                    <img class="tick-check on-switch ms-3" src="public/of-radio.svg">
+                    <img class="tick-check-2 off-switch ms-3" src="public/on-radio.svg">
+                    <p class="secendory-bg ms-3 mt-3">Both</p>
                   </div>
                 </div>
               </div>
 
+            </div>
+
+            <div class="row mt-4 ms-4">
+              <div class="col-md-12">
+                <h3 class="text-clr">Clinical Indication *</h3>
+                <div class="item-container mb-2">
+                  <img class="tick-check on-switch" src="public/tickcheck.svg">
+                  <img class="tick-check-2 off-switch" src="public/tickcheck-2.svg">
+                  <p class="secendory-bg ms-3">Assess for potential adjustment difficulty due to new diagnosis</p>
+                </div>
+                
+                <div class="item-container mb-2">
+                  <img class="tick-check on-switch" src="public/tickcheck.svg">
+                  <img class="tick-check-2 off-switch" src="public/tickcheck-2.svg">
+                  <p class="secendory-bg ms-3">Assess for potential adjustment difficulty due to change in diagnosis / change in status</p>
+                </div>
+                
+                <div class="item-container mb-2">
+                  <img class="tick-check on-switch" src="public/tickcheck.svg">
+                  <img class="tick-check-2 off-switch" src="public/tickcheck-2.svg">
+                  <p class="secendory-bg ms-3">Assess for potential efficacy of medication management/psychopharmacology </p>
+                </div>
+                
+                <div class="item-container">
+                  <img class="tick-check on-switch" src="public/tickcheck.svg">
+                  <img class="tick-check-2 off-switch" src="public/tickcheck-2.svg">
+                  <p class="secendory-bg ms-3">Others</p>
+                </div>
+                
+              </div>
+              <div class="row mt-3">
+                <div class="col-4 d-flex inputs">
+                  <input type="text" class="form-control" placeholder="Please specify">
+                </div>
             </div>
 
 
@@ -200,21 +229,21 @@
               <div class="col-md-6">
                 <h3 class="text-clr">Upload Files *</h3>
                 <p class="primary-bg text-nowrap">Upload following necessary items for medication management:</p>
-                <div class="item-container">
+                <div class="item-container mb-1">
                   <img class="" src="public/ticky.svg">
                   <p class="secendory-bg ms-3">Current medication with dosages</p>
                 </div>
-                <div class="item-container">
+                <div class="item-container mb-1">
                   <img class="" src="public/ticky.svg">
                   <p class="secendory-bg ms-3">Problem list</p>
                 </div>
-                <div class="item-container">
+                <div class="item-container mb-1">
                   <img class="" src="public/ticky.svg">
                   <p class="secendory-bg ms-3">Past medical and Psychiatry history</p>
                 </div>
                 <div class="item-container">
                   <img class="" src="public/ticky.svg">
-                  <p class="secendory-bg ms-3">Recent labs (Past 6 months)</p>
+                  <p class="secendory-bg ms-3 mb-1">Recent labs (Past 6 months)</p>
                 </div>
               </div>
               <div class="col">
@@ -237,29 +266,34 @@
               <div class="col">
                 <h3 class="text-clr">Available Appointments *</h3>
                 <div class="col">
-                  <div class="d-flex justify-content-between">
-                    <div class="btn mt-3">
-                      <label>
-                        <input type="radio" name="option" class="form-check-inputs me-2" value="option1">
-                        Wednesday, April 3, 2:30 PM 
-                      </label>
+                  <div class="d-flex flex-wrap justify-content-between">
+                    <div class="col mb-3">
+                      <button class="btn d-flex align-items-center">
+                        <img class="tick-check on-switch" src="public/tickcheck.svg">
+                        <img class="tick-check-2 off-switch" src="public/on-btn.svg">
+                        <p class="ms-3 mb-0 text-nowrap">Wednesday, April 3, 2:30 PM</p>
+                      </button>
                     </div>
-                    <div class="btn mt-3">
-                      <label>
-                        <input type="radio" name="option" class="form-check-inputs me-2" value="option1">
-                        Wednesday, April 3, 2:30 PM 
-                      </label>
+                    <div class="col mb-3">
+                      <button class="btn d-flex align-items-center">
+                        <img class="tick-check on-switch" src="public/tickcheck.svg">
+                        <img class="tick-check-2 off-switch" src="public/on-btn.svg">
+                        <p class="ms-3 mb-0 text-nowrap">Wednesday, April 3, 2:30 PM</p>
+                      </button>
                     </div>
-                    <div class="btn mt-3">
-                      <label>
-                        <input type="radio" name="option" class="form-check-inputs me-2" value="option1">
-                        Wednesday, April 3, 2:30 PM 
-                      </label>
+                    <div class="col mb-3">
+                      <button class="btn d-flex align-items-center">
+                        <img class="tick-check on-switch" src="public/tickcheck.svg">
+                        <img class="tick-check-2 off-switch" src="public/on-btn.svg">
+                        <p class="ms-3 mb-0 text-nowrap">Wednesday, April 3, 2:30 PM</p>
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            
+            
 
             <div class="row mt-5">
               <div class="col">
@@ -283,22 +317,8 @@
   </div>
   
 
-  <script>
-		var onSwitch = document.querySelector(".on-switch");
-		var offSwitch = document.querySelector(".off-switch");
+  <script src="health.js"></script>
 
-		onSwitch.addEventListener("click", function() {
-			onSwitch.style.display = "none";
-			offSwitch.style.display = "block";
-		});
-
-    offSwitch.addEventListener("click", function() {
-			offSwitch.style.display = "none";
-			onSwitch.style.display = "block";
-		});
-    
-	</script>
-  
 </body>
 
 </html>

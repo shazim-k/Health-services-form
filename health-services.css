@@ -35,6 +35,14 @@ body {
   color: #FFFFFF;
 }
 
+.bg-seceondary{
+  font-family: 'Nib Pro' !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 40px !important;
+  color: #FFFFFF !important;
+}
+
 .secondary-text{
   font-size: 18px;
   font-weight: 400;
@@ -56,17 +64,17 @@ body {
 }
 
 .secendory-bg{
-  font-family: 'Nib Pro' !important;
+  font-family: 'DM Sans' !important;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   color: #1E3B5A !important;
   opacity: 0.75 !important;
 }
 
 .primary-bg{
-  font-family: 'Nib Pro' !important;
-  font-weight: 700;
-  font-size: 14px;
+  font-family: 'DM Sans' !important;
+  font-weight: 400;
+  font-size: 18px;
   color: #1E3B5A !important;
   opacity: 0.75 !important;
 }
@@ -75,12 +83,14 @@ body {
 
 .card{
   border-radius: 16px !important;
+  border-color: #1E3B5A !important;
 }
 
 .card-header{
   border-top-left-radius: 16px !important;
   border-top-right-radius: 16px !important;
   background: #247FA4 !important;
+  font-family: 'Nib Pro' !important;
 }
 
 .on-switch{
@@ -102,7 +112,14 @@ body {
   border-radius: 100px;
   background-color: #FFFFFF;
   padding: 13px;
+  border: 1px solid rgb(202, 198, 198);
 }
+
+.inputs input:focus {
+  border: 1px solid #247FA4 !important;
+  box-shadow: none !important;
+}
+
 
 .inputs ::placeholder{
   font-weight: 400;
@@ -176,13 +193,26 @@ body {
   border: none;
 }
 
+.off-switch {
+  display: none;
+}
+
+
+
 /* btn section end*/
 
 .item-container {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  line-height: 0;
 }
+
+.item-container p {
+  margin: 0;
+}
+
+
+
 
 .dropdown-toggle {
   display: flex;
@@ -220,4 +250,37 @@ a {
   .card{
     width: fit-content;
   }
+}
+/* date picker section*/
+.birth-svg {
+  background-image: url("/public/birth.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.ui-datepicker-header {
+  color: #1E3B5A !important;
+  background-color: #FFFFFF !important;
+  font-family: 'DM Sans' !important;
+  border: none !important;
+}
+.ui-datepicker {
+  background-color: #FFFFFF !important;
+  font-family: Arial, sans-serif;
+  width: 19.5rem !important;
+}
+.ui-datepicker th{
+  color: #1E3B5A !important;
+}
+
+.ui-datepicker td a {
+  color: #1E3B5A !important;
+  background-color: #FFFFFF !important;
+  border: none !important;
+}
+.ui-widget-content{
+  transform: translate(6px , 10px) !important;
+  border-radius: 18px !important;
+  border: none !important;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);;
 }
