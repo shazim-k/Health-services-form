@@ -30,8 +30,16 @@ body {
 /*text clr size */
 
 .primary-text{
+  font-family: 'DM Sans' !important;
   font-size: 14px;
   font-weight: 300;
+  color: #FFFFFF;
+}
+
+.secondary-text{
+  font-family: 'Nib Pro' !important;
+  font-size: 18px;
+  font-weight: 400;
   color: #FFFFFF;
 }
 
@@ -41,12 +49,6 @@ body {
   font-weight: 700 !important;
   font-size: 40px !important;
   color: #FFFFFF !important;
-}
-
-.secondary-text{
-  font-size: 18px;
-  font-weight: 400;
-  color: #FFFFFF;
 }
 
 .text-clr{
@@ -82,8 +84,8 @@ body {
 /* card section*/
 
 .card{
-  border-radius: 16px !important;
-  border-color: #1E3B5A !important;
+  border-bottom-left-radius: 16px !important;
+  border-bottom-right-radius: 16px !important;
 }
 
 .card-header{
@@ -93,7 +95,7 @@ body {
   font-family: 'Nib Pro' !important;
 }
 
-.on-switch{
+.switch-txt{
   font-family: 'Nib Pro' !important;
   font-weight: 700;
   font-size: 20px;
@@ -148,6 +150,17 @@ body {
   padding-top: 0.5rem;
 }
 
+.textarea:focus {
+  outline: none !important;
+  border-color: #247FA4 !important;
+}
+
+.textarea::placeholder {
+  padding-left: 2rem !important;
+}
+
+
+
 .form-check-label{
   color: #1E3B5A !important;
   opacity: 0.75 !important;
@@ -189,8 +202,39 @@ body {
   border-radius: 100px !important;
   color: #FFFFFF !important;
   width: fit-content;
+  padding: 10px 40px !important;
+  border: none;
+}
+
+.btn-3 {
+  background: rgba(30, 59, 90, 0.1) !important;
+  border-radius: 100px !important;
+  color: #1E3B5A !important;
+  opacity: 0.75 !important;
+  width: fit-content;
   padding: 8px 24px !important;
   border: none;
+}
+
+.btn-3.active {
+  background: #247FA4 !important;
+  color: #FFFFFF !important; 
+}
+
+.btn-3.active .ticks-check {
+  display: none;
+}
+
+.btn-3.active .on-btn {
+  display: block;
+}
+
+.ticks-check {
+  display: block;
+}
+
+.on-btn {
+  display: none;
 }
 
 .off-switch {
@@ -201,15 +245,6 @@ body {
 
 /* btn section end*/
 
-.item-container {
-  display: flex;
-  align-items: center;
-  line-height: 0;
-}
-
-.item-container p {
-  margin: 0;
-}
 
 
 
@@ -244,18 +279,27 @@ a {
   border-radius: 18px !important;
   border: none !important;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 120px;
 }
 
 @media (max-width: 600px) {
   .card{
     width: fit-content;
   }
+  .card-header{
+    width: fit-content;
+  }
 }
+
 /* date picker section*/
+
 .birth-svg {
   background-image: url("/public/birth.svg");
   background-repeat: no-repeat;
-  background-position: right 10px center;
+  background-position: right 22px center;
+  cursor: pointer;
 }
 
 .ui-datepicker-header {
@@ -264,6 +308,7 @@ a {
   font-family: 'DM Sans' !important;
   border: none !important;
 }
+
 .ui-datepicker {
   background-color: #FFFFFF !important;
   font-family: Arial, sans-serif;
@@ -278,6 +323,7 @@ a {
   background-color: #FFFFFF !important;
   border: none !important;
 }
+
 .ui-widget-content{
   transform: translate(6px , 10px) !important;
   border-radius: 18px !important;
