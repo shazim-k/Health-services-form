@@ -25,24 +25,28 @@
 
 <body>
   <div class="container-fluid mt-4">
-    <div class="top-header">
-      <div class="header-name">
-        <div class="d-flex align-items-center ms-2">
-          <div class="logo">
-            <img src="public/behavioral.svg" alt="">
+    <div class="row">
+      <div class="col">
+        <div class="top-header">
+          <div class="header-name">
+            <div class="d-flex align-items-center ms-2">
+              <div class="logo">
+                <img src="public/behavioral.svg" alt="">
+              </div>
+              <div class="search-line ms-4 ps-5">
+                <input type="search" class="search-bar" placeholder="Physician Referral">
+              </div>
+            </div>
           </div>
-          <div class="search-line ms-4 ps-5">
-            <input type="search" class="search-bar" placeholder="Physician Referral">
+          <div class="d-flex me-2">
+            <div class="phone-icon">
+              <img src="public/phone.svg" alt="">
+            </div>
+            <div class="d-flex align-items-start flex-column">
+              <p class="primary-text text-nowrap mb-0">Got special needs?Call us</p>
+              <p class="secondary-text">888-515-3834</p>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="d-flex me-2">
-        <div class="phone-icon">
-          <img src="public/phone.svg" alt="">
-        </div>
-        <div class="d-flex align-items-start flex-column">
-          <p class="primary-text text-nowrap mb-0">Got special needs?Call us</p>
-          <p class="secondary-text">888-515-3834</p>
         </div>
       </div>
     </div>
@@ -188,33 +192,42 @@
             <div class="row mt-4 ms-4">
               <div class="col-md-12">
                 <h3 class="text-clr">Clinical Indication *</h3>
-                <div class="item-container mb-2">
-                  <img class="tick-check on-switch" src="public/tickcheck.svg">
-                  <img class="tick-check-2 off-switch" src="public/tickcheck-2.svg">
-                  <p class="secendory-bg ms-3">Assess for potential adjustment difficulty due to new diagnosis</p>
+                <div class="col">
+                  <div class="d-flex mb-2">
+                    <img class="tick-check on-switch" src="public/tickcheck.svg">
+                    <img class="tick-check-2 off-switch" src="public/tickcheck-2.svg">
+                    <p class="secendory-bg ms-3 mt-3">Assess for potential adjustment difficulty due to change in diagnosis /
+                      change in status</p>
+                  </div>
+                </div>  
+                <div class="col">
+                  <div class="d-flex mb-2">
+                    <img class="tick-check on-switch" src="public/tickcheck.svg">
+                    <img class="tick-check-2 off-switch" src="public/tickcheck-2.svg">
+                    <p class="secendory-bg ms-3 mt-3">Assess for potential adjustment difficulty due to change in diagnosis /
+                      change in status</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="d-flex mb-2">
+                    <img class="tick-check on-switch" src="public/tickcheck.svg">
+                    <img class="tick-check-2 off-switch" src="public/tickcheck-2.svg">
+                    <p class="secendory-bg ms-3 mt-3">Assess for potential adjustment difficulty due to change in diagnosis /
+                      change in status</p>
+                  </div>
                 </div>
 
-                <div class="item-container mb-2">
-                  <img class="tick-check on-switch" src="public/tickcheck.svg">
-                  <img class="tick-check-2 off-switch" src="public/tickcheck-2.svg">
-                  <p class="secendory-bg ms-3">Assess for potential adjustment difficulty due to change in diagnosis /
-                    change in status</p>
-                </div>
-
-                <div class="item-container mb-2">
-                  <img class="tick-check on-switch" src="public/tickcheck.svg">
-                  <img class="tick-check-2 off-switch" src="public/tickcheck-2.svg">
-                  <p class="secendory-bg ms-3">Assess for potential efficacy of medication management/psychopharmacology
-                  </p>
-                </div>
-
-                <div class="item-container">
-                  <img class="tick-check on-switch" src="public/tickcheck.svg">
-                  <img class="tick-check-2 off-switch" src="public/tickcheck-2.svg">
-                  <p class="secendory-bg ms-3">Others</p>
+                <div class="col">
+                  <div class="d-flex mb-2">
+                    <img class="tick-check on-switch" src="public/tickcheck.svg">
+                    <img class="tick-check-2 off-switch" src="public/tickcheck-2.svg">
+                    <p class="secendory-bg ms-3 mt-3">Assess for potential adjustment difficulty due to change in diagnosis /
+                      change in status</p>
+                  </div>
                 </div>
 
               </div>
+            </div>
               <div class="row mt-3">
                 <div class="col-4 d-flex inputs">
                   <input type="text" class="form-control" placeholder="Please specify">
@@ -226,21 +239,29 @@
                 <div class="col-md-6">
                   <h3 class="text-clr">Upload Files *</h3>
                   <p class="primary-bg text-nowrap">Upload following necessary items for medication management:</p>
-                  <div class="item-container mb-1">
-                    <img class="" src="public/ticky.svg">
-                    <p class="secendory-bg ms-3">Current medication with dosages</p>
+                  <div class="col">
+                    <div class="d-flex mb-1">
+                      <img class="" src="public/ticky.svg">
+                      <p class="secendory-bg ms-3 mt-3">Current medication with dosages</p>
+                    </div>
                   </div>
-                  <div class="item-container mb-1">
-                    <img class="" src="public/ticky.svg">
-                    <p class="secendory-bg ms-3">Problem list</p>
+                  <div class="col">
+                    <div class="d-flex mb-1">
+                      <img class="" src="public/ticky.svg">
+                      <p class="secendory-bg ms-3 mt-3">Current medication with dosages</p>
+                    </div>
                   </div>
-                  <div class="item-container mb-1">
-                    <img class="" src="public/ticky.svg">
-                    <p class="secendory-bg ms-3">Past medical and Psychiatry history</p>
+                  <div class="col">
+                    <div class="d-flex mb-1">
+                      <img class="" src="public/ticky.svg">
+                      <p class="secendory-bg ms-3 mt-3">Current medication with dosages</p>
+                    </div>
                   </div>
-                  <div class="item-container">
-                    <img class="" src="public/ticky.svg">
-                    <p class="secendory-bg ms-3 mb-1">Recent labs (Past 6 months)</p>
+                  <div class="col">
+                    <div class="d-flex mb-1">
+                      <img class="" src="public/ticky.svg">
+                      <p class="secendory-bg ms-3 mt-3">Current medication with dosages</p>
+                    </div>
                   </div>
                 </div>
                 <div class="col">

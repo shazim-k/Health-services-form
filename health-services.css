@@ -245,15 +245,6 @@ body {
 
 /* btn section end*/
 
-.item-container {
-  display: flex;
-  align-items: center;
-  line-height: 0;
-}
-
-.item-container p {
-  margin: 0;
-}
 
 
 
